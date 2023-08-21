@@ -21,7 +21,7 @@ The SLAM algorithm uses a particle filter to estimate the pose of the robot and 
 
 The following figure shows an example of the final map and trajectories for dataset 0:
 
-![Final map and trajectories](./01_Report/Map0.gif)
+![Final map and trajectories](04_SLAM/01_Report/Map0.gif)
 
 These are the results for all of the maps put together.
 
