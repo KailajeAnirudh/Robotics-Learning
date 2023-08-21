@@ -9,10 +9,10 @@ You can see the following projects in this repo:
 ![Histogram](./01_HistogramFilter/HistogramFilter.gif)
 
 ## Policy Iteration
-![UKF](03_PolicyIteration\PolicyIteration.gif)
+![UKF](./03_PolicyIteration/PolicyIteration.gif)
 
 ## Simultaneous Localization and Mapping
-![SLAM](04_SLAM\01_Report\combined.gif)
+![SLAM](./04_SLAM/01_Report/combined.gif)
 
 ## Linear Quadratic Regulator
-![LQR](05_LinearQuadraticRegulator\01_Report\acrobot.gif)
+![LQR](./05_LinearQuadraticRegulator/01_Report/acrobot.gif)
