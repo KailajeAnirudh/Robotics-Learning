@@ -19,10 +19,6 @@ This project implements Simultaneous Localization and Mapping (SLAM) in an indoo
 
 The SLAM algorithm uses a particle filter to estimate the pose of the robot and an occupancy grid to update the map. The algorithm performs one dynamics step and one observation step at each iteration. The dynamics step propagates the particles using the IMU data and adds some noise. The observation step updates the weights of the particles using the LiDAR data and resamples them if needed. It also updates the log odds of each cell in the map based on whether it is occupied or free according to the LiDAR scan.
 
-The following figure shows an example of the final map and trajectories for dataset 0:
-
-![Final map and trajectories](04_SLAM/01_Report/Map0.gif)
-
 These are the results for all of the maps put together.
 
 ![CombinedMaps](./01_Report/combined.gif)
