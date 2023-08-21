@@ -1,6 +1,6 @@
 # Policy Iteration
 
-This project implements policy iteration to find the optimal trajectory for a robot in a grid world with obstacles and rewards. The robot can move in four directions (north, east, west, south) with some stochasticity. The goal is to maximize the expected discounted reward over an infinite horizon.
+This project implements policy iteration to find the optimal trajectory for a robot in a grid world with obstacles and rewards. The robot can move in four directions (north, east, west, and south) with some stochasticity. The goal is to maximize the expected discounted reward over an infinite horizon.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ This project implements policy iteration to find the optimal trajectory for a ro
 
 ## Usage
 
-- To run the policy iteration algorithm, execute `python policy_iteration.py`. This will generate four plots for the first four iterations, showing the value function and the feedback control for each state.
+- To run the policy iteration algorithm, execute `python policy_iteration.py.` This will generate four plots for the first four interstate showing each state's value function and feedback control.
 - To change the parameters of the grid world, such as the size, the obstacles, the rewards, and the transition probabilities, modify the `grid_world.py` file.
 
 ## Results
@@ -19,19 +19,19 @@ The policy iteration algorithm converges to a unique optimal policy after six it
 
 The following figure shows the optimal policy and value function after six iterations:
 
-![Optimal policy and value function](.\PolicyIteration.gif)
+![Optimal policy and value function](./PolicyIteration.gif)
 
 ## Solution Approach
 
 ### 1. Map and Transition Matrix Creation
 
-The map given as shown below. I created an array of the map size 10x10. I assigned values for free cells as -1, obstacles as -10, and the goal cell as 10. The plot of my map is below.
+The map given is shown below. I created an array of the map size 10x10. I assigned values for free cells as -1, obstacles as -10, and the goal cell as 10. The plot of my map is below.
 
 I have created a function to create the transition matrix based on the current policy.
 
-![Given Map](.\01_Report\Map.png)
+![Given Map](./01_Report/Map.png)
 
-![Created Map](.\01_Report\PolicyIteration_Map.png)
+![Created Map](./01_Report/PolicyIteration_Map.png)
 
 ### 2. Policy Evaluation
 
@@ -53,11 +53,11 @@ $$
 
 The plot after the first iteration is shown below.
 
-![Caption](.\01_Report\Jpi_0.png)
+![Caption](./01_Report/Jpi_0.png)
 
 ### 3. Policy Iteration
 
-In each iteration, the policy improvement was done after the policy evaluation step. The policy improvement is done as:
+In each iteration, the policy improvement was done after the policy evaluation step. The policy improvement is done as follows:
 
 $$
 u^{(k+1)}(x) = \arg\min_{u \in U} E_\epsilon[q(x, u) + \gamma J^\pi_{(k)}(f(x, u) + \epsilon)]
@@ -65,8 +65,8 @@ $$
 
 I have attached the iterations for the cost and reward structure mentioned in the homework below.
 
-![Policy Improvement with Goal Reward 10](.\01_Report\PolicyImprovement10reward.png)
+![Policy Improvement with Goal Reward 10](./01_Report/PolicyImprovement10reward.png)
 
 I noticed that the policy doesn’t necessarily ever converge. I increased the reward to the goal and observed the policy converged with the goal.
 
-![Policy Improvement with Goal Reward 100](.\01_Report\PolicyImprov1000.png)
+![Policy Improvement with Goal Reward 100](./01_Report/PolicyImprov1000.png)
